@@ -1,65 +1,192 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="bg-black text-white scroll-smooth">
+
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full flex justify-center gap-8 py-4 bg-black/80 backdrop-blur z-10">
+
+        <a href="#about" className="text-gray-400 hover:text-white">
+          About
+        </a>
+
+        <a href="#experience" className="text-gray-400 hover:text-white">
+          Experience
+        </a>
+
+        <a href="#projects" className="text-gray-400 hover:text-white">
+          Projects
+        </a>
+
+        <a href="#contact" className="text-gray-400 hover:text-white">
+          Contact
+        </a>
+
+      </nav>
+
+
+      {/* HERO */}
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+
+        <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
+          Aditya Upadhyay
+        </h1>
+
+        <p className="mt-4 text-xl text-gray-400">
+          Computer Science & Systems Engineering Student
+        </p>
+
+        <p className="mt-2 text-gray-500">
+          Full Stack Developer • DSA in Java
+        </p>
+
+        <div className="mt-8 flex gap-6">
+
+          <a
+            href="https://github.com/AdityaQQ"
+            className="px-6 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            className="px-6 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="mailto:adityaup2103@gmail.com"
+            className="px-6 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+          >
+            Email
+          </a>
+
+        </div>
+
+      </section>
+
+
+      {/* ABOUT */}
+      <section id="about" className="py-24 px-6 max-w-4xl mx-auto text-center">
+
+        <h2 className="text-4xl font-bold mb-6">
+          About
+        </h2>
+
+        <p className="text-gray-400 leading-relaxed">
+          I’m Aditya Upadhyay, a Computer Science and Systems Engineering
+          undergraduate at Kalinga Institute of Industrial Technology,
+          Bhubaneswar (2027). I enjoy building full-stack applications with
+          clean architecture, strong backend systems, and practical
+          user-centered design. Currently focused on improving Data Structures
+          and Algorithms in Java while building real-world products and
+          learning how production systems work.
+        </p>
+
+      </section>
+
+
+      {/* EXPERIENCE */}
+      <section id="experience" className="py-24 px-6 max-w-4xl mx-auto">
+
+        <h2 className="text-4xl font-bold mb-10 text-center">
+          Experience
+        </h2>
+
+        <div className="border border-gray-700 p-6 rounded hover:border-white transition">
+
+          <h3 className="text-xl font-semibold">
+            Technology Consulting Intern — Ernst & Young (EY)
+          </h3>
+
+          <p className="text-gray-400 mt-2">
+            Worked on IT Transformation in Government and Public Sector.
+            Contributed to research and analysis related to digital
+            transformation strategies in public sector organizations.
           </p>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+      </section>
+
+
+      {/* TECH STACK */}
+      <section className="py-24 text-center">
+
+        <h2 className="text-4xl font-bold mb-10">
+          Tech Stack
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-6 text-gray-400 text-lg">
+
+          <span>Java</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>TailwindCSS</span>
+          <span>Docker</span>
+
         </div>
-      </main>
-    </div>
+
+      </section>
+
+
+      {/* PROJECTS */}
+      <section id="projects" className="py-24 px-6 max-w-4xl mx-auto">
+
+        <h2 className="text-4xl font-bold mb-10 text-center">
+          Projects
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+
+          <div className="border border-gray-700 p-6 rounded hover:border-white transition">
+
+            <h3 className="text-xl font-semibold">
+              Full Stack Web Application
+            </h3>
+
+            <p className="text-gray-400 mt-2">
+              Built using Node.js, Express, MongoDB and TailwindCSS
+              with scalable backend APIs and authentication.
+            </p>
+
+          </div>
+
+
+          <div className="border border-gray-700 p-6 rounded hover:border-white transition">
+
+            <h3 className="text-xl font-semibold">
+              AI / Machine Learning Project
+            </h3>
+
+            <p className="text-gray-400 mt-2">
+              Implemented machine learning model with data preprocessing,
+              training and prediction pipeline.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* CONTACT */}
+      <section id="contact" className="py-24 text-center">
+
+        <h2 className="text-4xl font-bold mb-6">
+          Contact
+        </h2>
+
+        <p className="text-gray-400">
+          adityaup2103@gmail.com
+        </p>
+
+      </section>
+
+    </main>
   );
 }
